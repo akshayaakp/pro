@@ -1,0 +1,162 @@
+<!-- <div class="topnav">
+    <a class="nav-item nav-link" routerLink="/inquiry" routerLinkActive="active">Invoice</a>
+    <a class="nav-item nav-link" routerLink="/payment" routerLinkActive="active">Payment & Aging</a>
+    <a class="nav-item nav-link" routerLink="/credit" routerLinkActive="active">Credit/Debit Memo</a>
+    <a class="nav-item nav-link" routerLink="/financial" routerLinkActive="active">Overall Sales Data</a>
+    <div class="topnav-right">
+        <a class="nav-item nav-link" routerLink="/custprofile" routerLinkActive="active"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="45" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z " />
+            <path fill-rule="evenodd " d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z " />
+            </svg></a>
+    </div>
+</div> -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">FINANCIAL SHEET</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/customerdashboard">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" routerLink="/invoice">Invoice</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/payment">Payment and aging</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/credit">credit & debit memo</a> 
+                </li>
+               <li class="nav-item">
+                    <a class="nav-link " routerLink="/overall">Overall sales data</a>
+                </li>
+            </ul>
+            <div class="topnav-right">
+                <a class="nav-item nav-link" routerLink="/custprofile" routerLinkActive="active"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="45" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z " />
+                    <path fill-rule="evenodd " d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z " />
+                    </svg></a>
+            </div>
+            <!-- <form class=" d-flex ">
+                <input class="form-control me-2 " type="search " placeholder="Search " aria-label="Search ">
+                <button class="btn btn-outline-success " type="submit ">Search</button>
+            </form> -->
+        </div>
+    </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="assets/FI3.jpg">
+
+            <div class="container">
+                <div class="carousel-caption text-start">
+                    <h1>HELLO AND WELCOME TO THE FINANCIAL SHEET SECTION</h1>
+
+                    <H3>This page will help you to access and view all the data that you are in need of.</H3>
+
+                    <!-- <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Another example headline.</h1>
+                    <p>Some representative placeholder content for the second slide of the carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+            <div class="container">
+                <div class="carousel-caption text-end">
+                    <h1>One more for good measure.</h1>
+                    <p>Some representative placeholder content for the third slide of this carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider ">
+
+    <div class="row featurette ">
+        <div class="col-md-7 ">
+            <h2 class="featurette-heading ">INVOICE DETAILS<span class="text-muted "></span></h2>
+            <p class="lead ">Invoice is a document which holds the amount to be paid back to the vendor.The amount in the invoice would be entered against the purchase order in the incomming invoice transaction.This amount would be verified against the goods received and the price in the purchase order</p>
+            <p class="lead ">Invoice details are displayed using SAP iRPA</p>
+            
+        </div>
+        <div class="col-md-5 ">
+            <img src="assets/invoice.jpg" height="500" width="500">
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider ">
+
+    <div class="row featurette ">
+        <div class="col-md-7 order-md-2 ">
+            <h2 class="featurette-heading ">PAYMENT AND AGING<span class="text-muted "></span></h2>
+            <p class="lead ">Accounts Receivable Aging Reports are periodic reports that help organizations to analyze the financial conditions of their clients, especially their customers. It helps to classify the firm’s accounts receivables according to the period of time that the invoice has been pending. It also provides a specific financial insight about the company and its consumers.</p>
+            <!-- <p class="lead ">Here you will be able to view your</p> -->
+            
+        </div>
+        <div class="col-md-5 order-md-1 ">
+            <img src="assets/aging.jpg" height="500" width="500">
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider ">
+
+    <div class="row featurette ">
+        <div class="col-md-7 ">
+            <h2 class="featurette-heading ">CREDIT MEMO AND DEBIT MEMO<span class="text-muted "></span></h2>
+            <p class="lead ">A transaction that reduces Amounts Receivable from a customer is a credit memo. For eg. The customer could return damaged goods.  A debit memo is a transaction that reduces Amounts Payable to a vendor because; you send damaged goods back to your vendor.</p>
+            
+        </div>
+        <div class="col-md-5 ">
+            <img src="assets/credit.jpg" height="500" width="500">
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider ">
+    
+
+
+    
+
+
+    <!-- /END THE FEATURETTES -->
+
+</div>
+<!-- /.container -->

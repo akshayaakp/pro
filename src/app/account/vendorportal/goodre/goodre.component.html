@@ -1,0 +1,61 @@
+<h3>
+    <b>HEADER</b></h3>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col"> DOCUMENT NO</th>
+            <th scope="col">DOCUMENT DATE</th>
+            <th scope="col">POSTING DATE</th>
+            <th scope="col">ENTRY DATE</th>
+            <th scope="col">ENTRY TIME</th>
+            <th scope="col">USERNAME</th>
+            
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let people of result">
+            <td>{{people.MAT_DOC._text}}</td>
+            <td>{{people.DOC_DATE._text}}</td>
+            <td>{{people.PSTNG_DATE._text}}</td>
+            <td>{{people.ENTRY_DATE._text}}</td>
+            <td>{{people.ENTRY_TIME._text}}</td>
+            <td>{{people.USERNAME._text}}</td>
+           
+        </tr>
+        
+    </tbody>
+</table>
+<hr>
+<h3>
+    <b>LINE ITEMS</b></h3>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            
+            <th scope="col">MATERIAL</th>
+            <th scope="col">PLANT</th>
+            <th scope="col">STORAGE LOCATION</th>
+            <th scope="col">MOV_TYPE</th>
+            <th scope="col">VENDOR</th>
+            <th scope="col">CUSTOMER</th>
+            <th scope="col">ENTRY QUANTITY</th>
+            <th scope="col">UNIT OF ENTRY</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let people of result1">
+
+            
+            <td>{{people.MATERIAL._text}}</td>
+            <td>{{people.PLANT._text}}</td>
+            <td>{{people.STGE_LOC._text}}</td>
+            <td>{{people.MOVE_TYPE._text}}</td>
+            <td>{{people.VENDOR._text}}</td>
+            <td>{{people.CUSTOMER._text}}</td>
+            <td>{{people.ENTRY_QNT._text}}</td>
+            <td>{{people.ENTRY_UOM._text}}</td>
+        </tr>
+    </tbody>
+</table>

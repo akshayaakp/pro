@@ -1,0 +1,317 @@
+/*
+    DEMO STYLE
+*/
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+  SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #a51c1c;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #a51c1c;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #a51c1c;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: #a51c1c;
+  background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #a51c1c;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #a51c1c;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+a.download {
+  background: #fff;
+  color: #a51c1c;
+}
+
+a.article,
+a.article:hover {
+  background: #a51c1c !important;
+  color: #fff !important;
+}
+
+/* ---------------------------------------------------
+  CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+  MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #sidebar {
+      margin-left: -250px;
+  }
+  #sidebar.active {
+      margin-left: 0;
+  }
+  #sidebarCollapse span {
+      display: none;
+  }
+}
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 60rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 60rem;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+/* rtl:end:ignore */
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 42vh 32px;
+  font-size: 14px;
+  background: #eee;
+  text-align: center;
+}
+
+.file-input {
+  display: inline-block;
+  text-align: left;
+  background: #fff;
+  padding: 16px;
+  width: 450px;
+  position: relative;
+  border-radius: 3px;
+}
+
+.file-input > [type='file'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.file-input > .button {
+  display: inline-block;
+  cursor: pointer;
+  background: #eee;
+  padding: 8px 16px;
+  border-radius: 2px;
+  margin-right: 8px;
+}
+
+.file-input:hover > .button {
+  background: dodgerblue;
+  color: white;
+}
+
+.file-input > .label {
+  color: #333;
+  white-space: nowrap;
+  opacity: .3;
+}
+
+.file-input.-chosen > .label {
+  opacity: 1;
+}

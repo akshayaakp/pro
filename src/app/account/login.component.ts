@@ -5,8 +5,11 @@ import { first } from 'rxjs/operators';
 
 import { AccountService, AlertService } from '@app/_services';
 
-@Component({ templateUrl: 'login.component.html' })
+@Component({ templateUrl: 'login.component.html',
+styleUrls: ['./login.component.less'] })
 export class LoginComponent implements OnInit {
+    slides = [{'image': 'assets/cus.jpg'}, {'image': 'assets/ven1.jpg'},{'image': 'assets/employee slide.jpg'}];
+    //myimage:string = "C:\Users\Akshaya\Desktop\login portal\src\assets\kaar.jpg";
     form: FormGroup;
     loading = false;
     submitted = false;
@@ -43,17 +46,31 @@ export class LoginComponent implements OnInit {
         if (this.form.invalid) {
             return;
         }
-
+        
         this.loading = true;
-        this.accountService.login(this.f.username.value, this.f.password.value)
-            .pipe(first())
+        var res = this.accountService.login(this.f.username.value, this.f.password.value)
+
+            //.pipe(first())
             .subscribe(
                 data => {
-                    this.router.navigate([this.returnUrl]);
+                   // console.log("result"+data);
+                    if(data.stat == "true")
+                    {
+                        console.log("hello");
+                        this.router.navigate(['dashboard']);
+                    }
+                    else{
+                        console.log("error");
+                        
+                    }
+                   // console.log("url"+this.returnUrl);
                 },
+
                 error => {
+                    console.log("error"+error);
                     this.alertService.error(error);
                     this.loading = false;
                 });
+                //console.log("response"+localStorage.getItem("return"));
     }
 }

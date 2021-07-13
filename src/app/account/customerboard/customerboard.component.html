@@ -1,0 +1,171 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">CUSTOMER DASHBOARD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" routerLink="/inquiry">Inquiry</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/salesorder">salesorder</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/delivery">Delivery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/financial">Financial Sheet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/master">Master data upload</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/dashboard">LogOut</a>
+                </li>
+
+            </ul>
+            <div class="topnav-right">
+
+
+
+                <a class="nav-item nav-link" routerLink="/custprofile" routerLinkActive="active"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="45" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z " />
+                    <path fill-rule="evenodd " d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z " />
+                    </svg></a>
+            </div>
+            <!-- <form class=" d-flex ">
+                <input class="form-control me-2 " type="search " placeholder="Search " aria-label="Search ">
+                <button class="btn btn-outline-success " type="submit ">Search</button>
+            </form> -->
+        </div>
+    </div>
+</nav>
+<hr>
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="assets/dash.jpg">
+
+            <div class="container">
+                <div class="carousel-caption text-start">
+                    <h1>HELLO AND WELCOME BACK!</h1>
+
+                    <H3>This portal will help you to access and view all the data that you are in need of.</H3>
+
+                    <!-- <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Another example headline.</h1>
+                    <p>Some representative placeholder content for the second slide of the carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+            <div class="container">
+                <div class="carousel-caption text-end">
+                    <h1>One more for good measure.</h1>
+                    <p>Some representative placeholder content for the third slide of this carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider ">
+
+    <div class="row featurette ">
+        <div class="col-md-7 ">
+            <h2 class="featurette-heading ">SAP SALES AND DISTRIBUTION<span class="text-muted "></span></h2>
+            <p class="lead ">Allows organizations to store and manage customer- and product-related data. Organizations use this data to manage all of the sales ordering, shipping, billing, and invoicing of their goods and services.</p>
+            <p class="lead ">Here you will be able to view your</p>
+            <ul class="lead ">
+                <li>Inquiry Data</li>
+                <li>Sales Order Data</li>
+                <li>List of Delivery</li>
+            </ul>
+        </div>
+        <div class="col-md-5 ">
+            <img src="assets/SD.jpg" height="500" width="500">
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider ">
+
+    <div class="row featurette ">
+        <div class="col-md-7 order-md-2 ">
+            <h2 class="featurette-heading ">SAP FINANCE MODULE <span class="text-muted "></span></h2>
+            <p class="lead ">Financial Sheet has complete financial transaction that you have done.</p>
+            <p class="lead ">Here you will be able to view your</p>
+            <ul class="lead ">
+                <li>Invoice Details</li>
+                <li>Payment and Aging</li>
+                <li>Credit/Debit Memo</li>
+                <li>Overall Sales Data</li>
+
+            </ul>
+        </div>
+        <div class="col-md-5 order-md-1 ">
+            <img src="assets/FI2.jpg" height="500" width="500">
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider ">
+
+    <div class="row featurette ">
+        <div class="col-md-7 ">
+            <h2 class="featurette-heading ">MASTER DATA UPLOAD<span class="text-muted "></span></h2>
+            <p class="lead ">And yes, this is the last functionality,wherein you can add a file containing details of members to be added as a customer</p>
+            
+        </div>
+        <div class="col-md-5 ">
+            <img src="assets/NE.jpg" height="500" width="500">
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider ">
+
+    
+
+
+    <!-- /END THE FEATURETTES -->
+
+</div>
+<!-- /.container -->
+ 
+    
+
+
+

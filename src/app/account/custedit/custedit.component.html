@@ -1,0 +1,90 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">CUSTOMER DASHBOARD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/customerdashboard">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" routerLink="/inquiry">Inquiry</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/salesorder">salesorder</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/delivery">Delivery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/financial">Financial Sheet</a>
+                </li>
+
+
+            </ul>
+            <div class="topnav-right">
+
+                <a class="nav-item nav-link" routerLink="/custprofile" routerLinkActive="active"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="45" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z " />
+                    <path fill-rule="evenodd " d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z " />
+                    </svg></a>
+            </div>
+            <!-- <form class=" d-flex ">
+                <input class="form-control me-2 " type="search " placeholder="Search " aria-label="Search ">
+                <button class="btn btn-outline-success " type="submit ">Search</button>
+            </form> -->
+        </div>
+    </div>
+</nav>
+<hr> &nbsp; &nbsp;
+
+
+<div class="card">
+    <h4 class="card-header">Edit your profile</h4>
+    <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group ">
+                <label for="customer_id">Customer_id</label>
+                <input type="text " formControlName="customer_id" class="form-control" />
+
+            </div>
+            <div class="form-group ">
+                <label for="Name">Name</label>
+                <input type="text" formControlName="Name" class="form-control"/>
+
+            </div>
+            <div class="form-group">
+
+                <label for="city">City</label>
+                <input type="text" formControlName="city" class="form-control"/>
+            </div>
+            <div class=" form-group ">
+                <label for="country">Country</label>
+                <input type="text " formControlName="country" class="form-control"/>
+
+            </div>
+            <div class=" form-group ">
+                <label for="countrycode">Country code</label>
+                <input type="number " formControlName="countrycode" class="form-control"/>
+
+            </div>
+
+
+            <div class="form-group ">
+                <label for="postcode">Post code</label>
+                <input type="number" formControlName="postcode" class="form-control"/>
+
+            </div>
+            <div class="form-group">
+                <button [disabled]="loading" class="btn btn-primary">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                SAVE
+                </button>
+    
+            </div>
+        </form>
+        
+    </div>
+</div>

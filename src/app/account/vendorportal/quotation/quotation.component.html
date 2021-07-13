@@ -1,0 +1,108 @@
+<h3>
+    <b>QUOTATION HEADER</b></h3>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">PURCHASE DOCUMENT NO</th>
+            <th scope="col">CREATED ON</th>
+            <th scope="col">CREATED BY</th>
+            <th scope="col">STATUS</th>
+            <th scope="col">VENDOR</th>
+            <th scope="col">PURCHASE ORG</th>
+            <th scope="col">PURCHASE GROUP</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let people of result">
+
+
+            <!-- <th scope="row">1</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td> -->
+
+            <td>{{people.DOC_NUMBER._text}}</td>
+            <td>{{people.CREATED_ON._text}}</td>
+            <td>{{people.CREATED_BY._text}}</td>
+            <td>{{people.STATUS._text}}</td>
+            <td>{{people.VENDOR._text}}</td>
+            <td>{{people.PURCH_ORG._text}}</td>
+            <td>{{people.PUR_GROUP._text}}</td>
+            
+           
+            
+            
+
+        </tr>
+        <!-- <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr> -->
+    </tbody>
+</table>
+<hr>
+<h3>
+    <b>QUOTATION LINE ITEMS</b></h3>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">SHORT TEXT</th>
+            <th scope="col">MATERIAL</th>
+            <th scope="col">PLANT</th>
+            <th scope="col">TARGET QUANTITY</th>
+            <th scope="col">NET PRICE</th>
+            <th scope="col">PRICE UNIT</th>
+            <th scope="col">NET VALUE</th>
+            <th scope="col">GROSS VALUE</th>
+            <th scope="col">QUOT DEAD</th>
+            
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let people of result1">
+
+
+            <!-- <th scope="row">1</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td> -->
+
+            <td>{{people.SHORT_TEXT._text}}</td>
+            <td>{{people.MATERIAL._text}}</td>
+            <td>{{people.PLANT._text}}</td>
+            <td>{{people.TARGET_QTY._text}}</td>
+            <td>{{people.NET_PRICE._text}}</td>
+            <td>{{people.PRICE_UNIT._text}}</td>
+            <td>{{people.NET_VALUE._text}}</td>
+            <td>{{people.GROS_VALUE._text}}</td>
+            <td>{{people.QUOT_DEAD._text}}</td>
+
+
+            
+
+        </tr>
+        <!-- <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr> -->
+    </tbody>
+</table>

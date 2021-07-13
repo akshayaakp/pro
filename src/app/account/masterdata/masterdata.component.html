@@ -1,0 +1,197 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">CUSTOMER DASHBOARD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" routerLink="/customerdashboard">Home</a>
+            </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" routerLink="/inquiry">Inquiry</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/salesorder">salesorder</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/delivery">Delivery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/financial">Financial Sheet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/master">Master data upload</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/dashboard">LogOut</a>
+                </li>
+
+            </ul>
+            <div class="topnav-right">
+
+
+
+                <a class="nav-item nav-link" routerLink="/custprofile" routerLinkActive="active"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="45" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z " />
+                    <path fill-rule="evenodd " d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z " />
+                    </svg></a>
+            </div>
+            <!-- <form class=" d-flex ">
+                <input class="form-control me-2 " type="search " placeholder="Search " aria-label="Search ">
+                <button class="btn btn-outline-success " type="submit ">Search</button>
+            </form> -->
+        </div>
+    </div>
+</nav>
+
+<!-- <div class="container">
+    <input #fileInput type="file">
+    <button (click)="onfileupload()">upload</button>
+</div> -->
+<br>
+<br>
+<br>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("assets/C.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("assets/C.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("assets/C.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+.container { 
+  height: 200px;
+  position: relative;
+  border: 3px solid white; 
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border">MASTER DATA UPLOAD</span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <BR>
+        <br>
+  <h3 style="text-align:center;"></h3>
+  <p style="text-align:center;">This section of the portal is wherein you can create new customer id for people.Upload the excel file with neccessary details of the customer and you will receive the customer id</p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <!-- <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p> -->
+  <div class="container">
+    <div class="center">
+      <!-- <button>Centered Button</button> -->
+      
+    <input #fileInput type="file">
+    <br>
+    
+    <button class="btn btn-light" (click)="onfileupload()">UPLOAD NOW</button>
+      <p>Customers with ids {{result}} are created</p>
+      
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <!-- <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p> -->
+  
+  </div>
+</div>
+
+<!-- <div class="bgimg-1">
+  <div class="caption">
+  <span class="border">COOL!</span>
+  </div>
+</div> -->
+
+</body>
+</html>
