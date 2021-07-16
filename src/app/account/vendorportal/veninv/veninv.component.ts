@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+
 import { vendor } from '@app/_services/vendor.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountService, AlertService } from '@app/_services';
 import { MatDialogConfig } from "@angular/material/dialog";
 import { MatDialog } from '@angular/material/dialog';
+import { VeninvdetComponent } from '../veninvdet/veninvdet.component';
 declare var $:any;
 @Component({
-  selector: 'app-credmemo',
-  templateUrl: './credmemo.component.html',
-  styleUrls: ['./credmemo.component.less']
+  selector: 'app-veninv',
+  templateUrl: './veninv.component.html',
+  styleUrls: ['./veninv.component.less']
 })
-export class CredmemoComponent implements OnInit {
+export class VeninvComponent implements OnInit {
   selected = "----";
   selectedgroup:any;
   result:Array<any>;
@@ -19,7 +21,8 @@ export class CredmemoComponent implements OnInit {
   loading = false;
     submitted = false;
     returnUrl: string;
-    userid:any;
+    isShow = true;
+    userid :any;
   constructor(private vedorservice: vendor,
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -35,44 +38,29 @@ export class CredmemoComponent implements OnInit {
       
   });
   this.userid=vendor.uname;
+  var res = this.vedorservice.getveniv()
+    
+  .subscribe(
+    data => {
+      this.result = data.stat;
+        console.log(this.result[0]);
+    },
+
+    error => {
+        console.log("error"+error);
+        this.alertService.error(error);
+        this.loading = false;
+    });
   }
-  getVal(){
-    console.log(this.selectedgroup);
-    vendor.doctype = this.selectedgroup;
-    if(vendor.doctype == 'H -> CREDIT MEMO')
-    {
-      var res = this.vedorservice.getcred()
-    
-    .subscribe(
-      data => {
-        this.result = data.stat;
-          console.log(this.result[0]);
-      },
+  connect(data:any,data1:any,data2:any){
+    console.log("inv"+data);
+    console.log("userid"+data1);
+    console.log("fy"+data2);
+    vendor.inv=data;
+    vendor.vid=data1;
+    vendor.fy=data2;
 
-      error => {
-          console.log("error"+error);
-          this.alertService.error(error);
-          this.loading = false;
-      });
-    
-    }
-    else if(vendor.doctype == 'S -> DEBIT MEMO')
-    {
-      var res = this.vedorservice.getdeb()
-    
-    .subscribe(
-      data => {
-        this.result = data.stat;
-          console.log(this.result[0]);
-      },
-
-      error => {
-          console.log("error"+error);
-          var value = "No Debit data found"
-          this.alertService.error(value);
-          this.loading = false;
-      });
-    }
+    this.dialog.open(VeninvdetComponent);
     
   }
   

@@ -13,6 +13,8 @@ import { HomeComponent } from './home';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCarouselModule } from '@ngmodule/material-carousel';import { QuotationComponent } from './account/vendorportal/quotation/quotation.component';import { GoodreComponent } from './account/vendorportal/goodre/goodre.component';
+import { PodetailComponent } from './account/vendorportal/podetail/podetail.component';
+import { VeninvdetComponent } from './account/vendorportal/veninvdet/veninvdet.component';
 ;
 
 
@@ -47,7 +49,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';import { Quotati
         
     ],
     bootstrap: [AppComponent],
-    entryComponents:[QuotationComponent,GoodreComponent],
+    entryComponents:[QuotationComponent,GoodreComponent,PodetailComponent,VeninvdetComponent],
     
 })
 export class AppModule { };

@@ -5,18 +5,20 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountService, AlertService } from '@app/_services';
 import { MatDialogConfig } from "@angular/material/dialog";
 import { MatDialog } from '@angular/material/dialog';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 declare var $:any;
 @Component({
-  selector: 'app-proedit',
-  templateUrl: './proedit.component.html',
-  styleUrls: ['./proedit.component.less']
+  selector: 'app-pocre',
+  templateUrl: './pocre.component.html',
+  styleUrls: ['./pocre.component.less']
 })
-export class ProeditComponent implements OnInit {
+export class PocreComponent implements OnInit {
   selected = "----";
   selectedgroup:any;
   result:any;
   form: FormGroup;
   loading = false;
+  uname:any;
     submitted = false;
     returnUrl: string;
   constructor(private vedorservice: vendor,
@@ -25,34 +27,28 @@ export class ProeditComponent implements OnInit {
         private router: Router,
         private alertService: AlertService,
         private dialog:MatDialog) { }
-        userid:any;
-        city:any;
-        firstname:any;
-        country:any;
-        street:any;
-        district:any;
-        lastname:any;
-        postcode:any;
-        uname:any;
 
   ngOnInit(): void {
     $(document).ready(function () {
       $('#sidebarCollapse').on('click', function () {
           $('#sidebar').toggleClass('active');
       });
-    
+      
   });
-  this.uname=vendor.uname;
+  this.uname = vendor.uname;
   this.loading = false;
+  
     this.form = this.formBuilder.group({
-      city: ['', Validators.required],
-      country: ['', Validators.required],
-      firstname: ['', Validators.required],
-      userid: ['', Validators.required],
-      district:['',Validators.required],
-      lastname:['',Validators.required],
-      postcode:['',Validators.required],
-      street:['',Validators.required],
+      compcode: ['', Validators.required],
+      ino: ['', Validators.required],
+      matdesc: ['', Validators.required],
+      matno: ['', Validators.required],
+      plant:['',Validators.required],
+      pg:['',Validators.required],
+      porg:['',Validators.required],
+      qty:['',Validators.required],
+      raised:['',Validators.required],
+      userid:['',Validators.required]
   }); 
   }
   
@@ -70,16 +66,16 @@ export class ProeditComponent implements OnInit {
     
     this.loading = true;
     console.log(this.f.userid.value);
-    var res = this.vedorservice.getprofedit(this.f.userid.value, this.f.firstname.value, this.f.lastname.value, this.f.street.value, this.f.city.value, this.f.district.value,this.f.postcode.value,this.f.country.value)
+    var res = this.vedorservice.getpocre(this.f.compcode.value, this.f.ino.value, this.f.matdesc.value, this.f.matno.value, this.f.plant.value, this.f.pg.value,this.f.porg.value,this.f.qty.value,this.f.raised.value,this.f.userid.value)
 
         //.pipe(first())
         .subscribe(
             data => {
                // console.log("result"+data);
-                if(data.stat == "S")
+                if(data.stat == "E")
                 {
                   this.loading = false;
-                  var text="the contents are edited";
+                  var text="Purchase Order is not created";
                   this.alertService.success(text)
                     // this.router.navigate(['customerdashboard']);
                 }
@@ -99,6 +95,6 @@ export class ProeditComponent implements OnInit {
   
     
           }
-        
+  }
 
-}
+

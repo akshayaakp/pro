@@ -1,0 +1,96 @@
+<h3>
+    <b>INVOICE HEADER</b></h3>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+                    <th scope="col">INVOICE DOCUMENT NO</th>
+                    <th scope="col">FISCAL YEAR</th>
+                    <th scope="col">POSTING DATE</th>
+                    <th scope="col">DOCUMENT DATE</th>
+                    <th scope="col">ENTRY TIME</th>
+                    <th scope="col">COMPANY CODE</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let people of result">
+
+
+            <!-- <th scope="row">1</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td> -->
+
+                    <td>{{people.INV_DOC_NO._text}}</td>
+                    
+                    <td>{{people.FISCAL_YEAR._text}}</td>
+                    <td>{{people.POSTING_DATE._text}}</td>
+                    <td>{{people.DOC_DATE._text}}</td>
+                    <td>{{people.ENTRY_TIME._text}}</td>
+                    <td>{{people.COMP_CODE._text}}</td>
+            
+           
+            
+            
+
+        </tr>
+        
+    </tbody>
+</table>
+<hr>
+<h3>
+    <b>INVOICE LINE ITEMS</b></h3>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">INVOICE DOCUMENT ITEM</th>
+            <th scope="col">DOCUMENT YEAR</th>
+            <th scope="col">PURCHASE ORDER NUMBER</th>
+            <th scope="col">ITEM</th>
+            <th scope="col">MATERIAL</th>
+            <th scope="col">DESCRIPTION</th>
+            <th scope="col">AMOUNT</th>
+            <th scope="col">UNIT</th>
+            <th scope="col">QUANTITY</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let people of result1">
+
+
+            <!-- <th scope="row">1</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td> -->
+
+            <td>{{people.INVOICE_DOC_ITEM._text}}</td>
+            <td>{{people.REF_DOC_YEAR._text}}</td>
+            <td>{{people.PO_NUMBER._text}}</td>
+            <td>{{people.PO_ITEM._text}}</td>
+            <td>{{people.MATNR._text}}</td>
+            <td>{{people.MAKTX._text}}</td>
+            <td>{{people.ITEM_AMOUNT._text}}</td>
+            <td>{{people.PO_UNIT._text}}</td>
+            <td>{{people.QUANTITY._text}}</td>
+
+
+            
+
+        </tr>
+        <!-- <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr> -->
+    </tbody>
+</table>
+<button class="button button4" (click)="onClickDownloadPdf()">
+    Download PDF
+  </button>

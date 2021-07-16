@@ -107,7 +107,7 @@
             <div class="container-fluid">
 
                 
-                <H3><B>CREDIT/DEBIT MEMO</B></H3>
+                <H3><B>INVOICE</B></H3>
                 <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <i class="fas fa-align-justify"></i>
               </button>
@@ -126,49 +126,45 @@
                   </div>
              </div>
         </nav>
-        <div>
-            <select [(ngModel)]="selectedgroup">
-            <option>H -> CREDIT MEMO</option>
-            <option>S -> DEBIT MEMO</option>
-            </select>
-            </div>
-            <br>
-          <input type="button" (click)="getVal()" value="submit"/>
-          <br>
-          <hr>
-          <table class="table">
+        <table class="table">
             <thead class="thead-light">
                 <tr>
-                    
-                    <th scope="col">COMPANY CODE</th>
-                    <th scope="col">VENDOR</th>
-                    <th scope="col">CLEARING DATE</th>
+                    <th scope="col">INVOICE DOCUMENT NO</th>
+                    <th scope="col">INVOICING PARTY</th>
                     <th scope="col">FISCAL YEAR</th>
-                    <th scope="col">DOCUMENT NUMBER</th>
-                    <th scope="col">ITEM NUMBER</th>
                     <th scope="col">POSTING DATE</th>
                     <th scope="col">DOCUMENT DATE</th>
-                    <th scope="col">AMOUNT IN LC</th>
-                    <th scope="col">G/L ACCOUNT</th>
+                    <th scope="col">ENTRY TIME</th>
+                    <th scope="col">COMPANY CODE</th>
+                    
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let people of result">
         
-                    <td>{{people.BUKRS._text}}</td>
-                    <td>{{people.LIFNR._text}}</td>
-                    <td>{{people.AUGDT._text}}</td>
-                    <td>{{people.GJAHR._text}}</td>
-                    <td>{{people.BELNR._text}}</td>
-                    <td>{{people.BUZEI._text}}</td>
-                    <td>{{people.BUDAT._text}}</td>
-                    <td>{{people.BLDAT._text}}</td>
-                    <td>{{people.DMBTR._text}}</td>
-                    <td>{{people.SAKNR._text}}</td>
+                    <td>{{people.INV_DOC_NO._text}}</td>
+                    <td>{{people.DIFF_INV._text}}</td>
+                    <td>{{people.FISC_YEAR._text}}</td>
+                    <td>{{people.PSTNG_DATE._text}}</td>
+                    <td>{{people.DOC_DATE._text}}</td>
+                    <td>{{people.ENTRY_TIME._text}}</td>
+                    <td>{{people.COMP_CODE._text}}</td>
+                    <td><button class="button button4"  (click)="connect(people.INV_DOC_NO._text,people.DIFF_INV._text,people.FISC_YEAR._text)">VIEW INVOICE</button>
                     
         
                 </tr>
-                
+                <!-- <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr> -->
             </tbody>
         </table>
-        
+       

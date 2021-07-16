@@ -5,19 +5,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountService, AlertService } from '@app/_services';
 declare var $:any;
 @Component({
-  selector: 'app-pa',
-  templateUrl: './pa.component.html',
-  styleUrls: ['./pa.component.less']
+  selector: 'app-podetail',
+  templateUrl: './podetail.component.html',
+  styleUrls: ['./podetail.component.less']
 })
-export class PaComponent implements OnInit {
-  selected = "----";
-  selectedgroup:any;
+export class PodetailComponent implements OnInit {
   result:Array<any>;
-  form: FormGroup;
-  loading = false;
-    submitted = false;
-    returnUrl: string;
-    userid:any;
+  result1:Array<any>;
   constructor(private vedorservice: vendor,
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -26,23 +20,25 @@ export class PaComponent implements OnInit {
 
   ngOnInit(): void {
     $(document).ready(function () {
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-    });
+      $('#sidebarCollapse').on('click', function () {
+          $('#sidebar').toggleClass('active');
+      });
   });
-  this.userid=vendor.uname;
-  var res = this.vedorservice.getpa()
+  console.log(vendor.purch);
+    var res = this.vedorservice.getpod(vendor.purch)
     
     .subscribe(
       data => {
         this.result = data.stat;
-          console.log(this.result[0]);
+        this.result1 = data.stat1;
+        console.log(this.result[0]);
+        console.log(this.result1[0]);
       },
 
       error => {
           console.log("error"+error);
           this.alertService.error(error);
-          this.loading = false;
+          
       });
   }
 

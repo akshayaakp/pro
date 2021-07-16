@@ -21,6 +21,8 @@ export class PoquoComponent implements OnInit {
   loading = false;
     submitted = false;
     returnUrl: string;
+    isShow = true;
+    userid:any;
   constructor(private vedorservice: vendor,
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -35,26 +37,32 @@ export class PoquoComponent implements OnInit {
       });
       
   });
-  
-  }
-  getVal(){
-    console.log(this.selectedgroup);
-    vendor.doctype = this.selectedgroup;
-    var res = this.vedorservice.getpoquo(vendor.doctype)
+  this.userid=vendor.uname;
+  var res = this.vedorservice.getpoquo()
     
-    .subscribe(
-      data => {
-        this.result = data.stat;
-          console.log(this.result[0]);
-      },
+  .subscribe(
+    data => {
+      this.result = data.stat;
+        console.log(this.result[0]);
+    },
 
-      error => {
-          console.log("error"+error);
-          this.alertService.error(error);
-          this.loading = false;
-      });
-    
+    error => {
+        console.log("error"+error);
+        this.alertService.error(error);
+        this.loading = false;
+    });
   }
+  
+    
+    
+    
+    
+   
+    
+    
+  
+
+    
   connect(data:any){
     console.log(data);
     vendor.pd=data;

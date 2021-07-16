@@ -35,6 +35,11 @@ import { CredmemoComponent } from './vendorportal/credmemo/credmemo.component';
 import { DebitmemoComponent } from './vendorportal/debitmemo/debitmemo.component';
 import { ProComponent } from './vendorportal/pro/pro.component';
 import { ProeditComponent } from './vendorportal/proedit/proedit.component';
+import { PurchaseorderComponent } from './vendorportal/purchaseorder/purchaseorder.component';
+import { PodetailComponent } from './vendorportal/podetail/podetail.component';
+import { PocreComponent } from './vendorportal/pocre/pocre.component';
+import { VeninvComponent } from './vendorportal/veninv/veninv.component';
+import { VeninvdetComponent } from './vendorportal/veninvdet/veninvdet.component';
 
 @NgModule({
     imports: [
@@ -91,7 +96,17 @@ import { ProeditComponent } from './vendorportal/proedit/proedit.component';
         
         ProComponent,
         
-        ProeditComponent
+        ProeditComponent,
+        
+        PurchaseorderComponent,
+        
+        PodetailComponent,
+        
+        PocreComponent,
+        
+        VeninvComponent,
+        
+        VeninvdetComponent
         
         
     ]

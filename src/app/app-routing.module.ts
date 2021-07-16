@@ -28,6 +28,11 @@ import { CredmemoComponent } from './account/vendorportal/credmemo/credmemo.comp
 import { DebitmemoComponent } from './account/vendorportal/debitmemo/debitmemo.component';
 import { ProComponent } from './account/vendorportal/pro/pro.component';
 import { ProeditComponent } from './account/vendorportal/proedit/proedit.component';
+import {PurchaseorderComponent} from './account/vendorportal/purchaseorder/purchaseorder.component';
+import { PodetailComponent } from './account/vendorportal/podetail/podetail.component';
+import { PocreComponent } from './account/vendorportal/pocre/pocre.component';
+import { VeninvComponent } from './account/vendorportal/veninv/veninv.component';
+import { VeninvdetComponent } from './account/vendorportal/veninvdet/veninvdet.component';
 //import{usersComponent} from './users';
 
 const accountModule = () => import('./account/account.module').then(x => x.AccountModule);
@@ -65,6 +70,12 @@ const routes: Routes = [
     { path: 'vendeb',component:DebitmemoComponent},
     { path: 'venpro',component:ProComponent},
     { path: 'venproedit',component:ProeditComponent},
+    { path: 'venpo',component:PurchaseorderComponent},
+    { path: 'venpod',component:PodetailComponent},
+    { path: 'venpocre',component:PocreComponent},
+    { path: 'veninv',component:VeninvComponent},
+    { path: 'veninvdet',component:VeninvdetComponent},
+    
 
 
     // otherwise redirect to home
