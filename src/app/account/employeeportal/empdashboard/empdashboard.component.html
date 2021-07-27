@@ -1,0 +1,124 @@
+<!-- Page Content  -->
+<div id="content">
+
+    <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-light">
+        <div class="container-fluid">
+
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+            <h2>VENDOR PORTAL</h2>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
+
+                    <li class="nav-item active">
+                        <p>
+
+                            <a routerLink="/emppro"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" height="50" width="50" alt="User-Profile-Image"></a>{{userid}}
+
+                        </p>
+                    </li>
+                    <!-- <li class="nav-item">
+                            <a class="nav-link" href="dashboard">Logout</a>
+                        </li>
+                         -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> -->
+                <img src="assets/vendor1.jpg">
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>WELCOME TO VENDOR PORTAL</h1>
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> -->
+                <img src="assets/vendor3.jpg">
+
+            </div>
+            <div class="carousel-item">
+                <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> -->
+                <img src="assets/vendor2.jpg">
+
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+    </div>
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+                <img src="assets/payr.jpg" width="140" height="140" class="bd-placeholder-img rounded-circle">
+                <h2>PAYROLL</h2>
+                <p> Quotation is a form of invitation that is sent to the vendors to submit a quotation indicating their pricing and terms and conditions.
+                </p>
+                <p><a class="btn btn-outline-secondary my-2" routerLink="/payroll">VIEW PAYROLL &raquo;</a></p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+                <img src="assets/po.jpg" width="140" height="140" class="bd-placeholder-img rounded-circle">
+                <h2>LEAVE TYPE</h2>
+                <p> A purchase order is a commercial document and first official offer issued by a buyer to a seller indicating types, quantities, and agreed prices for products or services.</p>
+                <p><a class="btn btn-outline-secondary my-2" routerLink="/leavety">View LEAVE TYPE &raquo;</a></p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+                <img src="assets/leavequo.jpg" width="140" height="140" class="bd-placeholder-img rounded-circle">
+                <h2>LEAVE QUOTA</h2>
+                <p>Goods receipt refers to the physical movement of goods into the warehouse from external vendors.</p>
+                <p><a class="btn btn-outline-secondary my-2" routerLink="/leavequo">View GOODS RECEIPT &raquo;</a></p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+                <img src="assets/leavedet.jpg" width="140" height="140" class="bd-placeholder-img rounded-circle">
+                <h2>LEAVE DETAIL</h2>
+                <p>The Vendor aging report displays the balances that are due to vendors, sorted by date interval or by aging period definition.</p>
+                <p><a class="btn btn-outline-secondary my-2" routerLink="/leavedet">View PA &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+                <img src="assets/unnamed.jpg" width="140" height="140" class="bd-placeholder-img rounded-circle">
+                <h2>LEAVE REQUEST</h2>
+                <p> The amount to be paid for the goods procurred through goods receipt along with the details of the material is provided by the vendor in the form of a document that is known as the invoice.</p>
+                <p><a class="btn btn-outline-secondary my-2" routerLink="/leavereq">View Leave Request &raquo;</a></p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+                <img src="assets/credit.jpg" width="140" height="140" class="bd-placeholder-img rounded-circle">
+                <h2>PAYSLIP</h2>
+                <p>A debit memo is a transaction that reduces Amounts Payable to a vendor and A transaction that reduces Amounts Receivable from a customer is a credit memo.</p>
+                <p><a class="btn btn-outline-secondary my-2" routerLink="/payslip">View CREDIT/DEBIT MEMO &raquo;</a></p>
+            </div>
+            <!-- /.col-lg-4 -->
+
+            <!-- /.col-lg-4 -->
+            <a class="btn btn-outline-secondary my-2" routerLink="/venlogin">Logout</a>
+        </div>
+        <!-- /.row -->

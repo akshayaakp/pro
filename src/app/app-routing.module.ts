@@ -33,6 +33,17 @@ import { PodetailComponent } from './account/vendorportal/podetail/podetail.comp
 import { PocreComponent } from './account/vendorportal/pocre/pocre.component';
 import { VeninvComponent } from './account/vendorportal/veninv/veninv.component';
 import { VeninvdetComponent } from './account/vendorportal/veninvdet/veninvdet.component';
+import { EmploginComponent } from './account/employeeportal/emplogin/emplogin.component';
+import { EmpdashboardComponent } from './account/employeeportal/empdashboard/empdashboard.component';
+import { EmproComponent } from './account/employeeportal/empro/empro.component';
+import { EmpproedComponent } from './account/employeeportal/empproed/empproed.component';
+import { PayrollComponent } from './account/employeeportal/payroll/payroll.component';
+import { PayslipComponent } from './account/employeeportal/payslip/payslip.component';
+import { LevetypeComponent } from './account/employeeportal/levetype/levetype.component';
+import { LeavequoComponent } from './account/employeeportal/leavequo/leavequo.component';
+import { LeavedetComponent } from './account/employeeportal/leavedet/leavedet.component';
+import { LeavereqComponent } from './account/employeeportal/leavereq/leavereq.component';
+import { FullsettComponent } from './account/employeeportal/fullsett/fullsett.component';
 //import{usersComponent} from './users';
 
 const accountModule = () => import('./account/account.module').then(x => x.AccountModule);
@@ -75,6 +86,17 @@ const routes: Routes = [
     { path: 'venpocre',component:PocreComponent},
     { path: 'veninv',component:VeninvComponent},
     { path: 'veninvdet',component:VeninvdetComponent},
+    { path: 'emplogin',component:EmploginComponent},
+    { path: 'empdash',component:EmpdashboardComponent},
+    { path: 'emppro',component:EmproComponent},
+    { path: 'empproed',component:EmpproedComponent},
+    { path: 'payroll',component:PayrollComponent},
+    { path: 'payslip',component:PayslipComponent},
+    { path: 'leavety',component:LevetypeComponent},
+    { path: 'leavequo',component:LeavequoComponent},
+    { path: 'leavedet',component:LeavedetComponent},
+    { path: 'leavereq',component:LeavereqComponent},
+    { path: 'fullsett',component:FullsettComponent},
     
 
 

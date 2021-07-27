@@ -40,6 +40,17 @@ import { PodetailComponent } from './vendorportal/podetail/podetail.component';
 import { PocreComponent } from './vendorportal/pocre/pocre.component';
 import { VeninvComponent } from './vendorportal/veninv/veninv.component';
 import { VeninvdetComponent } from './vendorportal/veninvdet/veninvdet.component';
+import { EmploginComponent } from './employeeportal/emplogin/emplogin.component';
+import { EmpdashboardComponent } from './employeeportal/empdashboard/empdashboard.component';
+import { EmproComponent } from './employeeportal/empro/empro.component';
+import { EmpproedComponent } from './employeeportal/empproed/empproed.component';
+import { PayslipComponent } from './employeeportal/payslip/payslip.component';
+import { PayrollComponent } from './employeeportal/payroll/payroll.component';
+import { LevetypeComponent } from './employeeportal/levetype/levetype.component';
+import { LeavequoComponent } from './employeeportal/leavequo/leavequo.component';
+import { LeavedetComponent } from './employeeportal/leavedet/leavedet.component';
+import { LeavereqComponent } from './employeeportal/leavereq/leavereq.component';
+import { FullsettComponent } from './employeeportal/fullsett/fullsett.component';
 
 @NgModule({
     imports: [
@@ -106,7 +117,29 @@ import { VeninvdetComponent } from './vendorportal/veninvdet/veninvdet.component
         
         VeninvComponent,
         
-        VeninvdetComponent
+        VeninvdetComponent,
+        
+        EmploginComponent,
+        
+        EmpdashboardComponent,
+        
+        EmproComponent,
+        
+        EmpproedComponent,
+        
+        PayslipComponent,
+        
+        PayrollComponent,
+        
+        LevetypeComponent,
+        
+        LeavequoComponent,
+        
+        LeavedetComponent,
+        
+        LeavereqComponent,
+        
+        FullsettComponent
         
         
     ]

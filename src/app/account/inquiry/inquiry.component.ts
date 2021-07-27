@@ -30,12 +30,7 @@ export class InquiryComponent implements OnInit {
 
   ngOnInit(): void {
     var res = this.accountService.customerinquirydetails()
-    // this.data = [
-    //   { firstName: 'John', lastName: 'Doe', age: '35' },
-    //   { firstName: 'Michael', lastName: 'Smith', age: '39' },
-    //   { firstName: 'Michael', lastName: 'Jordan', age: '45' },
-    //   { firstName: 'Tanya', lastName: 'Blake', age: '47' }
-  // ];
+    
     .subscribe(
       data => {
 this.dat=[35];
@@ -43,14 +38,6 @@ console.log(this.dat);
         console.log("hi"); 
         this.result=data.stat;
           console.log(this.result[0]);
-          
-          
-        // }
-// for (let index = 0; index < 50; index++) {
-//   this.result.push([JSON.stringify(data.stat[index])]);
-//   // this.result[index]=JSON.stringify(data.stat[index]);
-//         console.log("result"+this.result[index]);
-// }
         
       },
 
