@@ -97,6 +97,10 @@ export class FullsettComponent implements OnInit {
                 //.pipe(first())
                 .subscribe(
                     data => {
+                      this.returntype = data.stat18; 
+                      console.log(this.returntype);
+                      if(this.returntype == 'S')
+                      {
                       this.addpay = data.stat;
                       this.basicpay = data.stat1;
                       this.house = data.stat2;
@@ -115,7 +119,7 @@ export class FullsettComponent implements OnInit {
                       this.desc = data.stat15; 
                       this.div = data.stat16; 
                       this.jobtitle = data.stat17; 
-                      this.returntype = data.stat18; 
+                      
                        this.datej = moment('2019-01-16', 'YYYY-MM-DD')
     this.datej1 = this.datej.format('DD-MM-YYYY');
     this.datel = moment(this.dol, 'YYYY-MM-DD')
@@ -124,7 +128,11 @@ export class FullsettComponent implements OnInit {
                        // console.log("result"+this.result);
                         console.log("respo"+this.result);
                         console.log("basicpay"+data.stat1);
-                        
+                      }
+                      else if(this.returntype == 'E'){
+                        var err = "Sorry! You are not in your notice period";
+                        this.alertService.info(err);
+                      }
                         
                     },
     
